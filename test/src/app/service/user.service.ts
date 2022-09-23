@@ -12,7 +12,7 @@ export class UserService {
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users');
   }
-  getUsers(): Observable<User> {
+  getUser(): Observable<User> {
     return this.http.get<User>('https://jsonplaceholder.typicode.com/users/1');
   }
 }
