@@ -8,7 +8,7 @@ import { User } from '../interface/user';
 })
 export class UserService {
 
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient ) {}
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users');
