@@ -10,9 +10,8 @@ import { UserService } from './service/user.service';
 export class AppComponent implements OnInit {
   title = 'test';
   private user: User = {
-    'id': 1,
-      'name': 'Leanne Graham',
-      'username': 'Bret',
+      'name': 'Junior Graham',
+      'username': 'junior',
       'email': 'Sincere@april.biz',
       'address': {
         'street': 'Kulas Light',
