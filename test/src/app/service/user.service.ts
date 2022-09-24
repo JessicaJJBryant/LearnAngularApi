@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
 
-  private apiUrl = environment.apiUrl;
+  private apiUrl = 'https://jsonplaceholder.typicode.com';
 
   constructor(private http: HttpClient ) {}
 
