@@ -14,9 +14,12 @@ export class UserService {
   constructor(private http: HttpClient ) {}
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users');
+    return this.http.get<User[]>(`https://jsonplaceholder.typicode.com/users`);
   }
   getUser(): Observable<User> {
     return this.http.get<User>('https://jsonplaceholder.typicode.com/users/1');
+  }
+  createUser(user: User): Observable<User> {
+    return this.http.post<User>('https://jsonplaceholder.typicode.com/users/', user);
   }
 }
