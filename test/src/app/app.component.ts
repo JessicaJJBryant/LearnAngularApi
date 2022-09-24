@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.onGetUsers();
+    this.onGetUser();
   }
 
   onGetUsers(): void {
@@ -20,6 +21,14 @@ export class AppComponent implements OnInit {
       (response) => console.log(response),
       (error: any) => console.log(error),
       () => console.log('Done getting users')
+    );
+  }
+
+  onGetUser(): void {
+    this.userService.getUser().subscribe(
+      (response) => console.log(response),
+      (error: any) => console.log(error),
+      () => console.log('Done getting user')
     );
   }
 }
